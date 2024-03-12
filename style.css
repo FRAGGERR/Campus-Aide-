@@ -1,0 +1,313 @@
+*{
+  margin:0;
+  padding:0;
+  box-sizing: border-box;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+html,body{
+  height:100%;
+  width:100%;
+}
+
+#minicircle{
+  transition:all cubic-bezier(0.19, 1, 0.22, 1) 1s; /*to make the mouse move a little slower and smoother*/
+  width:40px;
+  height:40px;
+  position: absolute;
+  z-index: 99999; /*to keep it on top of everything*/
+  border-radius: 50%;
+  opacity: 0.7;
+  background-color: #fff;
+}
+
+.bounding{
+  width:fit-content;
+  overflow:hidden; /*this way when we push the title tags down then it will not overlap or show*/
+  
+}
+
+.bounding .boundingelem{
+  transform: translateY(100%);
+}
+
+#main{
+  width:100%;
+  background-color:black;
+}
+
+#hero{
+  position: relative;
+  color:#fff;
+  width:100%;
+  height:100vh;
+  background-color:black;
+}
+
+#nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 20px 40px;
+  color: #fff;
+}
+
+#nav a{
+  text-decoration: none; /* underline from that link will be removed */
+  font-size:18px;
+  color: #fff;
+}
+
+#heading{
+  margin-top:90px;
+}
+
+#heading h1{
+ margin-left: 40px;
+ opacity:0.6;
+ line-height: 1;
+ font-size: 9vw;
+ text-transform: uppercase;
+ font-weight: 900;
+}
+
+#heading #second{
+  margin-left: 240px;
+}
+
+.blocktext {
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  width: fit-content;
+}
+
+.blocktext h5 {
+  text-transform: uppercase;
+  font-size: 15px;
+  text-align: right !important;
+  margin-left:250px;
+  margin-top: 40px;
+}
+
+#smallheading{
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+  margin-top: 100px;
+  padding-right: 50px;
+}
+
+#smallheading h5 {
+  text-transform: uppercase;
+  margin-top: .5vw;
+  font-size: 1vw;
+  text-align: right;
+  margin-left:280px ;
+}
+
+#herofooter {
+  padding: 0 2vw;
+  width: 100%;
+  position: absolute;
+  bottom: 3%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#herofooter a {
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+#herofooter #iconset{
+  display:flex;
+  gap:5px;
+  
+}
+
+#hero a{
+  color: #fff;
+  text-transform: uppercase;
+  text-decoration: none;
+
+}
+
+#herofooter .circle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:25px;
+  height:25px;
+  border-radius:50%;
+  background-color: #888;
+}
+
+#secondpage{
+  color:#fff; /* will keep all elements of second page white */
+  padding-right:10vw;
+  padding-top: 120px;
+  background-color: black;
+  width:100%;
+  height:100vh;
+  
+}
+
+
+.elem {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 3.5vw 3vw;
+  padding-right: 0;
+  border-top: 1px solid #888;
+}
+
+.elem h1 {
+  font-size: 7.6vw;
+  opacity: .7;
+}
+
+.elemlast{
+  border-bottom: 2px solid #888;
+}
+
+.elem img {
+  opacity: 0;
+  pointer-events: none;
+  height: 140%;
+  z-index: 999;
+  position: absolute;
+  transform: translate(-50%, -50%);
+}
+
+#creators{
+  display: flex;
+  align-items: center;
+  gap: 50px;
+  color: #fff;
+  padding: 10vw 10vw;
+  padding-left: 20vw;
+  width: 100%;
+  background-color: black;
+}
+
+#textcreators{
+  width:28rem;
+  
+}
+
+#textcreators h3{
+  text-transform: uppercase;
+  opacity:0.6;
+  margin-bottom: 30px;
+}
+
+#textcreators p{
+  line-height: 1.8;
+  margin-bottom: 30px;
+}
+
+#creators img{
+  width:390px;
+}
+
+#textcreators a {
+  padding: 12px 22px;
+  border: 1px solid #fff;
+  border-radius: 100px;
+  color: #fff;
+  font-size: 12px;
+  text-decoration: none;
+}
+
+#socials{
+  color: #fff;
+  padding: 20px 30px;
+  padding-bottom: 7vw;
+  background-color: black;
+}
+
+#socials h5{
+  text-transform: uppercase;
+  opacity: .6;
+}
+
+#socials h3{
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+#footer {
+  color: #fff;
+  background-color: black;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 30px;
+}
+
+#footerleft {
+  display: flex;
+  gap: 20px;
+}
+
+#footerright {
+  display: flex;
+  gap: 30px;
+}
+
+#footer a {
+  text-transform: uppercase;
+  font-size: 14px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+}
+
+.elem a {
+  
+  color: white; /* Set the link color to white */
+  font-size: 8em; /* Set the font size to h3 size */
+  text-decoration: none; /* Remove underline from the link */
+  opacity:0.6;
+  font-weight:900;
+
+   }
+
+
+/*scrollbar disappears in  locomotive*/
+/* Custom styles for the location information page */
+#details {
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  max-width: 500px;
+}
+
+#details h2 {
+  margin-top: 0;
+  color: #333;
+}
+
+#details p {
+  margin: 5px 0;
+  color: #666;
+}
+
+#details p.speed-info {
+  font-weight: bold;
+}
+
+#details p.alert {
+  color: red;
+  font-weight: bold;
+}

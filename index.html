@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="loco.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.0.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="minicircle"></div>
+    <div id="main">
+        <div id="hero">
+            <div id="nav">
+                <a href="https://campus-aide.netlify.app/">Become a Volunteer-Join our community<i class="ri-arrow-right-up-line"></i></a1>
+                <h3>MENU++</h3>
+            </div>
+            <div id="heading">
+                <div class="bounding">
+                    <h1 class="boundingelem">Campus</h1>
+                </div>
+                <div class="blocktext">
+                    <div class="bounding">
+                        <h1 class="boundingelem" id="secondh1">Aide</h1>
+                    </div>
+                    <div class="bounding">
+                        <h5 class="boundingelem">Safeguarding campsuses, Connecting volunteers</h5>
+                    </div>
+
+                </div>
+            </div>
+            <div id="smallheading">
+                <div class="bounding">
+                    <h5 class="boundingelem">Choose your</h5>
+                </div>
+                <div class="bounding">
+                    <h5 class="boundingelem">Campus</h5>
+                </div>
+            </div>
+
+            <div id="herofooter">
+                <a href="https://www.srmist.edu.in">Initiated at SRM University <i class="ri-arrow-right-up-line"></i></a>
+                <a href="#">Features</a>
+                <div id="iconset">
+                    <div class="circle"><i class="ri-arrow-down-line"></i></div>
+                    <div class="circle"><i class="ri-arrow-down-line"></i></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="secondpage">
+            <div class="elem">
+                <img src="about.jpg" alt="">
+                <h1>About</h1>
+                <h5>2023-March</h5>
+            </div>
+            <div class="elem">
+                <img src="learn.jpg" alt="">
+                <h1>How to use</h1>
+                <h5>Learn</h5>
+            </div>
+            <div class="elem elemlast">
+                <img src="future.jpg" alt="">
+                <a href="#" id="geoLocationLink">Get Geolocation <i class="ri-arrow-right-up-line"></i></a>
+                <h5>SRM KTR</h5>
+            </div>
+        </div>
+
+        <div id="creators">
+            <img src="https://eu-central.storage.cloudconvert.com/tasks/ee418667-6344-4411-b003-66ef3dec51ef/WhatsApp%20Image%202024-03-11%20at%2013.01.42.jpg?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=cloudconvert-production%2F20240311%2Ffra%2Fs3%2Faws4_request&X-Amz-Date=20240311T073457Z&X-Amz-Expires=86400&X-Amz-Signature=a79c72d7ece267410db9904bb32e56c2a65b0e3f754af07c9bdc20bb9c1f22a4&X-Amz-SignedHeaders=host&response-content-disposition=attachment%3B%20filename%3D%22WhatsApp%20Image%202024-03-11%20at%2013.01.42.jpg%22&response-content-type=image%2Fjpeg&x-id=GetObject" alt="">
+            <div id="textcreators">
+                <h3> About us</h3>
+                <p>Crafted by three mates passionate about improving campus life, 
+                    our app simplifies university safety challenges,connecting students
+                     with seamless access to resources and community support. 
+                     Join us in revolutionizing campus experiences, one click at a time.</p>
+                <a href="https://www.instagram.com/campusaide_" target="_blank">Let's Talk</a>
+            </div>
+        </div>
+        <div id="socials">
+            <h5>hey there!</h5>
+            <h3>Look at our Institution!<i class="ri-arrow-right-up-line"></i></h3>
+        </div>
+        <div id="footer">
+            <div id="footerleft">
+                <h5>2023 &copy;</h5>
+                <h5>0:05 AM EST</h5>
+            </div>
+            <div id="footerright">
+                <a href="https://www.instagram.com/srmuniversityofficial/">instagram</a><a
+                    href="https://twitter.com/SRM_Univ">twitter</a><a
+                    href="https://www.linkedin.com/in/janenie-janakiraman-299b10292/">linkedin</a>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.4/gsap.min.js"
+        integrity="sha512-EZI2cBcGPnmR89wTgVnN3602Yyi7muWo8y1B3a8WmIv1J9tYG+udH4LvmYjLiGp37yHB7FfaPBo8ly178m9g4Q=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
+    <script src="script.js"></script>
+    <script>
+    // JavaScript to request geolocation when the "Get Geolocation" link is clicked
+    document.getElementById("geoLocationLink").addEventListener("click", function (event) {
+    event.preventDefault(); // Prevent the default behavior of the link
+    getLocation(); // Call the function to get geolocation
+    });    
+
+    function getLocation() {
+        if (navigator.geolocation) {
+            navigator.geolocation.getCurrentPosition(showPosition, showError);
+        } else {
+            alert("Geolocation is not supported by this browser.");
+        }
+    }
+
+    function showPosition(position) {
+        const { latitude, longitude } = position.coords;
+        const url = `https://www.google.com/maps?q=${latitude},${longitude}`;
+        window.open(url, '_blank'); // Open the link in a new tab
+    }
+
+    function getSpeed(position) {
+    const speed = position.coords.speed; // Get the speed of the device
+    if (speed === null || isNaN(speed)) {
+        // If speed is not available or is NaN, display a message
+        alert("Speed information is not available.");
+    } else {
+        // If speed is available, display it
+        alert("Speed of the device: " + speed + " m/s");
+    }
+}
+
+
+    function showError(error) {
+        switch (error.code) {
+            case error.PERMISSION_DENIED:
+                alert("User denied the request for Geolocation.");
+                break;
+            case error.POSITION_UNAVAILABLE:
+                alert("Location information is unavailable.");
+                break;
+            case error.TIMEOUT:
+                alert("The request to get user location timed out.");
+                break;
+            case error.UNKNOWN_ERROR:
+                alert("An unknown error occurred.");
+                break;
+        }
+    }
+</script>
